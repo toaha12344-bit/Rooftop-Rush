@@ -7,6 +7,7 @@ import { ShopModal } from './components/ShopModal';
 import { PauseModal } from './components/PauseModal';
 import { GameOverModal } from './components/GameOverModal';
 import { TouchControls } from './components/TouchControls';
+import { OfflineIndicator } from './components/OfflineIndicator';
 import { sounds } from './audio/soundEffects';
 
 const STORAGE_KEY = 'rooftop_rush_player_stats_v1';
@@ -212,6 +213,9 @@ export default function App() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-slate-950 select-none">
+      {/* Offline Mode Indicator */}
+      <OfflineIndicator />
+
       {/* 60fps HTML5 Canvas Viewport */}
       <div className="absolute inset-0 w-full h-full">
         <canvas

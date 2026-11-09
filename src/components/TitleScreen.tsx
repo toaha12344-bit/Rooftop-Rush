@@ -3,6 +3,8 @@ import { Play, ShoppingBag, Trophy, Coins, Volume2, VolumeX, Sparkles, ChevronRi
 import { BiomeId, PlayerStats } from '../types/game';
 import { BIOMES } from '../game/catalog';
 
+import { PWAInstallButton } from './PWAInstallButton';
+
 interface TitleScreenProps {
   stats: PlayerStats;
   isMuted: boolean;
@@ -48,8 +50,10 @@ export const TitleScreen: React.FC<TitleScreenProps> = ({
           </div>
         </div>
 
-        {/* Sound toggle & Shop Quick Link */}
+        {/* Action Controls: Install App, Sound Toggle, Shop Link */}
         <div className="flex items-center gap-2">
+          <PWAInstallButton />
+
           <button
             onClick={onToggleMute}
             className="p-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition shadow-lg cursor-pointer"

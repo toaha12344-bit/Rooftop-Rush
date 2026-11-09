@@ -1,0 +1,6 @@
+{
+  "name": "Rooftop Rush",
+  "description": "High-octane pixel rooftop endless runner dodging obstacles and escaping a hunter drone.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
